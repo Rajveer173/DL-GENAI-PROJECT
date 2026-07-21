@@ -169,7 +169,7 @@ if not examples.empty:
     with cols[1]:
         st.write("")
         st.write("")
-        if st.button("Load example", use_container_width=True):
+        if st.button("Load example", width="stretch"):
             row = examples.iloc[idx]
             st.session_state["prompt"] = row["prompt"]
             for o in OPTIONS:
@@ -219,7 +219,7 @@ if st.button("Solve", type="primary"):
                 na_rep="—",
             ),
             hide_index=True,
-            use_container_width=True,
+            width="stretch",
         )
         if kind == "exact":
             st.caption(
