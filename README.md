@@ -7,24 +7,7 @@
 Kaggle competition `smart-mcq-solver-challenge`: given a question and five
 options A-E, submit the top three options ranked. Scored with mAP@3.
 
-## Repository structure
 
-```
-dl-23f3000717-notebook-t22026.ipynb   the Kaggle notebook, all milestones end to end
-app.py                                Streamlit demo of the submission pipeline
-scripts/mcq/                          the pipeline as an importable package
-  data.py                             text cleaning, question identity, the leak-safe split
-  metrics.py                          mAP@3, accuracy, macro-F1, conditional rank-2/3 gain
-  matching.py                         lookup against the training bank, submission assembly
-  zeroshot.py                         the zero-shot NLI ranker: heads, premises, logit cache
-scripts/make_submission.py            builds and validates submission.csv
-scripts/rank23_experiment.py          picks the ranker that orders ranks 2-3
-scripts/improve_zeroshot.py           searches zero-shot variants, then writes the submission
-tests/                                pytest suite for the pipeline
-data/                                 competition data (train / test / sample submission)
-report/                               technical report and the script that builds it
-models/                               saved checkpoints
-```
 
 The notebook, the demo and `make_submission.py` all import the same matching
 logic from `scripts/mcq`, so there is one definition of how a question is
