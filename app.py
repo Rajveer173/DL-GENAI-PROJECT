@@ -1,9 +1,3 @@
-"""Streamlit demo of the Smart MCQ Solver pipeline.
-
-The matching logic is imported from `scripts/mcq` so the demo, the notebook and
-`scripts/make_submission.py` all answer questions the same way.
-"""
-
 import sys
 from collections import Counter
 from pathlib import Path
