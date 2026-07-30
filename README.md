@@ -9,9 +9,6 @@ options A-E, submit the top three options ranked. Scored with mAP@3.
 
 
 
-The notebook, the demo and `make_submission.py` all import the same matching
-logic from `scripts/mcq`, so there is one definition of how a question is
-answered.
 
 ## Setup
 
